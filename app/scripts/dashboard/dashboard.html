@@ -20,7 +20,7 @@
           <table ng-table="pendenzenTableParams" class="table table-striped" template-pagination="scripts/dashboard/oo-ngtable-nopagination.html">
             <tr ng-repeat="pendenz in $data">
               <td data-title="'Datum'|translate" sortable="'datum'">
-                {{pendenz.datum|date:"dd.MM.yyyy"}}
+                <span class="red ng-binding">{{pendenz.datum|date:"dd.MM.yyyy"}}</span>
               </td>
               <td data-title="'Bemerkung'|translate" sortable="'bemerkung'" ng-bind-html="renderBemerkungText(pendenz.bemerkung)">
               </td>
